@@ -21,17 +21,14 @@ def gradient_descent (x1, x2, y, w0, w1, w2, alpha, iter = 0):
         if (i + 1 == iter) or (round(float(prev_mse - new_mse), 4) <= 0.0001) :
             break
         i += 1
-
     return hypothesis(x1, x2, w0_new, w1_new, w2_new), new_mse
 
 if __name__ == '__main__':
-
     x1 = np.array([60, 67, 71, 75, 78])
     x2 = np.array([22, 24, 15, 20, 16])
     y = np.array([140, 159, 192, 200, 212])
 
     w0, w1, w2 = (0, 1, 1)
-
     alpha = 0.0002
 
     iter = int(input("Enter no of preferred iterations. Enter '0' if no specific preference: "))
