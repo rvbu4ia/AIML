@@ -38,8 +38,8 @@ def common_players(df, club, country):
     # Create a copy of club players with the matching club
     club_players = df[df['Club'] == club].copy()
     # Extract players with matching country from the copy of club players
-    common_players = club_players[club_players['Nationality'] == country]
-    return list(common_players['Name'])
+    common_players = club_players[club_players['Nationality'] == country]['Name']
+    return list(common_players)
 
 # Main function to load data, perform tests, and return formatted results
 def main(df, country_name, club_name):
